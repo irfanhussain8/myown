@@ -25,3 +25,7 @@ git pull origin main >>>>>> to pull data from remote repository
 git fetch origin main >>>>>> to fetch the data from remote repository
 git diff fetch-head head >>>>>> to see the differences in the repo from remote to local
 git merge >>>>>> to merge the local repo with remote repo.
+git branch feature-1 >>>>>> (create new branch)
+git branch >>>>>>> (shows list of branches)
+git checkout feature-1 >>>>>>> (switch branch)
+git branch -d feature-1 >>>>>>> (delete local branch)
