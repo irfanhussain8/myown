@@ -1,3 +1,3 @@
 this is for practice purpose
-here I'm checking log command
-Now I'm checking fetching
+here I'm checking log command (git log)
+Now I'm checking fetching (git fetch origin main >>>>> git diff fetch_head head)
