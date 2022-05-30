@@ -36,3 +36,7 @@ git checkout feature-1 >>>>>>> (switch branch)
 git branch -d feature-1 >>>>>>> (delete local branch)
 to delete the branch locally we need to pull the repo from remote and
 then we can use git branch -d feature-1
+
+             <<<<<<< GIT UNDO OPERATIONS >>>>>>>>
+     git restore irfan.txt cmds.txt  >>>>> to undo last edits from the files
+     
