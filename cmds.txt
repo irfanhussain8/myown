@@ -17,14 +17,19 @@ git log irfan.txt >>>>> to check history edits of single file
 git log --oneline irfan.txt >>>>> to see one line comments
 git log --oneline -1 irfan.txt >>>>> to see last 1 commit from history
 git show (commit ID) >>>>>> to see what has been updated in that commit
+
 git diff >>>> to see the difference
 git diff --color-words >>>>> to see the new changes made in different colors
 git diff --staged--color-words >>>>> to see the changes made in the staging area
 
 git pull origin main >>>>>> to pull data from remote repository
+
+
 git fetch origin main >>>>>> to fetch the data from remote repository
 git diff fetch-head head >>>>>> to see the differences in the repo from remote to local
 git merge >>>>>> to merge the local repo with remote repo.
+
+     <<<<<<<<branches commands>>>>>>>
 git branch feature-1 >>>>>> (create new branch)
 git branch >>>>>>> (shows list of branches)
 git checkout feature-1 >>>>>>> (switch branch)
