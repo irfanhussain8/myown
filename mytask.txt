@@ -1,2 +1,3 @@
 this is for practice purpose
 here I'm checking log command
+Now I'm checking fetching
