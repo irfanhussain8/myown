@@ -1,4 +1,0 @@
-this is for practice purpose
-here I'm checking log command (git log)
-Now I'm checking fetching (git fetch origin main >>>>> git diff fetch_head head)
-after fetching we need to merge the local repository with remote repository by using ( git merge )
