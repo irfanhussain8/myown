@@ -39,4 +39,6 @@ then we can use git branch -d feature-1
 
              <<<<<<< GIT UNDO OPERATIONS >>>>>>>>
      git restore irfan.txt cmds.txt  >>>>> to undo last edits from the files
-     
+     git restore irfan.txt >>>>>> to undo changes in a single file
+     The undo action is done only when the file is in working area.
+     it will not undo after staging and committing the repo.
