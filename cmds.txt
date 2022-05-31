@@ -33,6 +33,9 @@ git pull origin main >>>>>> to pull data from remote repository
 -----   git branch feature-1 >>>>>> (create new branch)
 -----   git branch >>>>>>> (shows list of branches)
 -----   git checkout feature-1 >>>>>>> (switch branch)
+
+     <<<<<<<<GIT CHERRY PICK COMMAND>>>>>>>
+----- git cherry-pick (commit ID) >>>>> to add specific commit id's from different branches to our current branch.
 -----   git branch -d feature-1 >>>>>>> (delete local branch)
 ## to delete the branch locally we need to pull the repo from remote and then we can use git branch -d feature-1
 
