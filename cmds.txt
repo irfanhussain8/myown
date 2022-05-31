@@ -63,3 +63,10 @@ git pull origin main >>>>>> to pull data from remote repository
 -----    git remote -v >>>>> to check the users in repository
 -----    git remote remove shameer009 GIT_HUB_URL >>>>>> to remove user from the repository
      
+           <<<<<<<<GIT CHERRY PICK COMMAND>>>>>>>
+----- git cherry-pick (commit ID) >>>>> to add specific commit id's from different branches to our current branch.
+  
+          <<<<<<< GIT blame command >>>>>>
+----- gti blame file name >>>>>> to check the authors
+          <<<<<< GIT bare repo >>>>>>>
+----- git clone --bare URL from github >>>>>>> to create bare repository
