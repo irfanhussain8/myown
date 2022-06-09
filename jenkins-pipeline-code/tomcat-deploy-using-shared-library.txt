@@ -1,0 +1,42 @@
+@Library('myapp-libs') _
+pipeline{
+agent {
+label 'master'
+}
+stages{
+stage("Git Checkout"){
+steps{
+git(branch: 'dev', credentialsId: 'javahometech', url: 'https://github.com/javahometech/my-app')
+}
+}
+stage("Maven Build"){
+steps{
+sh 'mvn package'
+}
+}
+stage("Tomcat Deploy Dev"){
+when{
+expression { params.env == "dev" }
+}
+steps{
+tomcatDeploy(params.creds,'172.31.15.109','ec2-user')
+}
+}
+stage("Tomcat Deploy UAT"){
+when{
+expression { params.env == "uat" }
+}
+steps{
+tomcatDeploy(params.creds,'172.31.15.120','ec2-user')
+}
+}
+stage("Tomcat Deploy Prod"){
+when{
+expression { params.env == "prod" }
+}
+steps{
+tomcatDeploy(params.creds,'172.31.15.159','ec2-user')
+}
+}
+}
+}
