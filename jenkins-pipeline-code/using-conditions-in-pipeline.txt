@@ -1,0 +1,17 @@
+pipeline{
+agent any
+parameters {
+choice choices: ['master', 'develop', 'qa'], description: 'Choose the branch to build', name: 'branchName'
+string description: 'Choose the git repo to build', name: 'gitUrl'
+}
+stages{
+stage("Git Checkout"){
+when{
+expression { params.branchName == "develop"}
+}
+steps{
+git url: params.gitUrl, branch: params.branchName
+}
+}
+}
+}
