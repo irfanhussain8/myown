@@ -1,0 +1,19 @@
+def call(name){
+  echo "Hi name, How are you?"
+}
+
+define function in git and configure it in jenkins
+
+@Library('myapp') _    >>>>>>>>>>> here myapp is library name which is set in jenkins configuration <<<<<<<<<<<<<<
+
+pipeline{
+    agent any
+    stages{
+        stage("welcome"){
+            steps{
+                hello("irfan")
+                hello("nagarjuna")
+            }
+        }
+    }
+}
