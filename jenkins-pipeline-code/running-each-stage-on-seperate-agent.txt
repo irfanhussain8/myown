@@ -1,0 +1,25 @@
+pipeline{
+agent any
+stages{
+stage("Build & Sonar"){
+parallel{
+stage("Maven Build"){
+agent{
+label "master"
+}
+steps{
+echo "maven build..."
+}
+}
+stage("Sonar Scaning"){
+agent{
+label "linux"
+}
+steps{
+echo "sonar scanning..."
+}
+}
+}
+}
+}
+}
