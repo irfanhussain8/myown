@@ -1,3 +1,16 @@
+def call(credId,tomcatIp,tomcatUser){
+  sshagent([credId]) {
+    // copy war file to tomcat server
+    sh """
+        scp -o StrictHostKeyChecking=no target/myweb*.war ${tomcatUser}@${tomcatIp}:/opt/tomcat8/webapps/myweb.war
+        ssh ${tomcatUser}@${tomcatIp} /opt/tomcat8/bin/shutdown.sh
+        ssh ${tomcatUser}@${tomcatIp} /opt/tomcat8/bin/startup.sh
+    """
+  }
+}
+
+first define the share library in github and configure it in jenkins after that write code in jenkins
+
 @Library('myapp-libs') _
 pipeline{
 agent {
