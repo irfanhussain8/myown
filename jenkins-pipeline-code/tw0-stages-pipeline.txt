@@ -1,0 +1,15 @@
+pipeline{
+agent any
+stages{
+stage("Git Checkout"){
+steps{
+git branch: 'dev', credentialsId: 'javahometech', url: 'https://github.com/javahometech/my-app'
+}
+}
+stage("Maven Build"){
+steps{
+sh 'mvn package'
+}
+}
+}
+}
